@@ -1,6 +1,6 @@
 ﻿
 
-## 📁 Inhoud/structuur
+## Inhoud/structuur
 
 - `Ruwe Data/` – Hierin zit de data van de Patiënten met en zonder Reumatoïde Atritis (RA).
 - `RScripts/` – Rscript waar alle data wordt verwerkt 
@@ -18,17 +18,21 @@
 
 ---
 
-## Introductie
-reads
+## Inleiding
+inleiding: +- 200 woorden met aanleiding, achtergrondinformatie en doelstelling. Bronnen (PDF) kunnen in een aparte folder met verwijzing.
 
 ## Methoden
+Methode: +- 200 woorden met methode, flowschema. Zie leerdoelen voor mi-
+nimale inhoud. Scripts, data etc. kunnen in een aparte folder met verwijzing.
 
 
-## 📊 Resultaten
+## Resultaten
+Resultaten: +- 200 woorden, inclusief correcte verwijzingen.
+Resultaten die verkregen zijn uit R
 
 ## Conclusie
-
-
+Conclusie: +- 200 woorden, inclusief aanbevelingen en onderzoek in context
+plaatsen.
 
 
 
