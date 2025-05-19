@@ -6,6 +6,8 @@
 - `RScripts/` – Rscript waar alle data wordt verwerkt 
 - `README.md` - Is het document waar het verslag (de tekst) in wordt gemaakt. 
 - `Human Genome/` - In deze map zit het referentie genoom.
+
+Bestand te groot, dus eruit gehaald. Nummer referentiegen en de gebruikte index code + package versie nummer duidelijk erin zetten zodat het nagedaan kan worden
 - `Bam bestanden/` - reads dat gemapt zijn tegen referentiegenoom  
 - `data/processed` - verwerkte datasets gegenereerd met scripts 
 - `resultaten/` - grafieken en tabellen
@@ -25,6 +27,8 @@ inleiding: +- 200 woorden met aanleiding, achtergrondinformatie en doelstelling.
 Methode: +- 200 woorden met methode, flowschema. Zie leerdoelen voor mi-
 nimale inhoud. Scripts, data etc. kunnen in een aparte folder met verwijzing.
 Welke referentiegen gebruikt via NCBI en welk nummertje 
+
+
 
 
 ## Resultaten
