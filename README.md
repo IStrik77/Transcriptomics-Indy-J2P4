@@ -24,6 +24,7 @@ inleiding: +- 200 woorden met aanleiding, achtergrondinformatie en doelstelling.
 ## Methoden
 Methode: +- 200 woorden met methode, flowschema. Zie leerdoelen voor mi-
 nimale inhoud. Scripts, data etc. kunnen in een aparte folder met verwijzing.
+Welke referentiegen gebruikt via NCBI en welk nummertje 
 
 
 ## Resultaten
