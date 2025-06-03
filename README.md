@@ -25,7 +25,7 @@
 
 Reumatoïde artritis (RA) is een chronische, systematische auto-immuunziekte waarbij het immuunsysteem het eigen lichaam aanvalt. De exacte oorzaak is nog onbekend, maar vermoedelijk speelt een combinatie van genetische aanleg, omgevingsfactoren en een ontspoord immuunsysteem een rol [Gabriel, 2001](Bronnen/gabriel2001.pdf). Een belangrijk kenmerk van RA is synovitis: een ontsteking van het gewrichtsslijmvlies, wat leidt tot pijn, zwelling en uiteindelijk gewrichtsschade [Radu & Bangua, 2021](Bronnen/cells-10-02857-v2.pdf). Vroege opsporing en behandeling kunnen schade beperken, maar genezing is (nog) niet mogelijk.
 
-In dit project wordt RNA-sequencing data geanalyseerd van synoviumbiopten van zowel gezonde personen als patiënten met RA (gevestigde diagnose, > 12 maanden). De analyse is uitgevoerd in R, met als doel: inzicht krijgen in genexpressieverschillen tussen de groepen en achterhalen welke biologische processen betrokken zijn bij RA, via Gene Ontology (GO-analyse) 
+In dit project is RNA-sequencing toegepast op synoviumbiopten van zowel gezonde personen als patiënten met RA (gevestigde diagnose >12 maanden), met als doel het identificeren van verschillen in genexpressie en betrokken biologische processen. De analyse is uitgevoerd in [Rstudio](RScripts/ProjectRA.R) en omvat onder meer differentiële expressieanalyse en functionele verrijkingsanalyse op basis van Gene Ontology (GO) en KEGG-pathways.
 
 De gebruikte brondata en artikelen zijn te vinden in de folder [bronnen](Bronnen). 
 
@@ -54,23 +54,22 @@ De gegenereerde countmatrix (data/count_matrix.txt) en een behandel-tabel met co
 
 ## Resultaten
 
-De analyse van de RNA-seq data toonde duidelijke verschillen in genexpressie tussen reumatoïde artritis (RA)-patiënten en gezonde controles. In totaal werden 102 genen met verhoogde expressie (log₂FC > 1, padj < 0.05) en 88 genen met verlaagde expressie (log₂FC < -1, padj < 0.05) geïdentificeerd. De volledige lijst van significante genen is beschikbaar in het resultatenbestand (welke okalweer) 
+De analyse van de RNA-seq data toonde duidelijke verschillen in genexpressie tussen reumatoïde artritis (RA)-patiënten en gezonde controles. In totaal werden 102 genen met verhoogde expressie (log₂FC > 1, padj < 0.05) en 88 genen met verlaagde expressie (log₂FC < -1, padj < 0.05) geïdentificeerd. De volledige lijst van significante genen is beschikbaar in [ResultatenRA](Resultaten/ResultatenRA.csv)
 
 
 De [volcano](Resultaten/Plots/VolcanoplotRA.png) plot toont een duidelijke scheiding tussen genen met verhoogde en verlaagde expressie in RA-patiënten. Genen met de meest significante expressieveranderingen (padj < 0.05) vallen op door hun sterke betrokkenheid bij ontstekingsgerelateerde processen.
 
 Vervolgonderzoek met [GO-enrichmentanalyse](Resultaten/Plots/Rplot02.png) toonde een significante oververtegenwoordiging van biologische processen die samenhangen met het immuunsysteem, waaronder ‘T cel activatie’ en ‘cytokine-mediated signaling’ . [KEGG-pathwayanalyse](Resultaten/hsa03260.png) suggereerde dat vooral routes zoals ‘T cell receptor signaling’ en ‘cytokine-cytokine receptor interaction’ betrokken zijn bij RA.
-Alle benodigde data, R-scripts en visualisaties zijn georganiseerd en terug te vinden in de betreffende mappen van de GitHub-repository 
+
 
 
 ## Conclusie
 
-In dit onderzoek is RNA-sequencing gebruikt om genexpressieverschillen te analyseren tussen synoviumbiopten van gezonde controles en patiënten met reumatoïde artritis (RA). De differentiële expressieanalyse toonde aan dat een aanzienlijk aantal genen significant anders tot expressie komt in RA, waarbij met name genen betrokken bij immuunrespons en ontstekingsprocessen zijn op- of afgeschaald. Dit bevestigt het ontstekingskarakter van RA zoals beschreven in de literatuur en sluit aan bij het klinische beeld van synovitis, waarbij het gewrichtsslijmvlies ontstoken raakt en beschadigd wordt.
+Deze studie toont aan dat RNA-sequencing van synoviumbiopten verschil in genexpressie kan onthullen tussen RA-patiënten en gezonde controles. vooral genen betrokken bij immuunrespons en ontsteking vertoonden sginificante regulatie, wat het ontstekingskarakter van RA onderstreept en aansluit bij de klinische kenmerken van synovitis.
 
-De verrijkingsanalyse via Gene Ontology en KEGG benadrukte het belang van pathways die gerelateerd zijn aan immuunactivatie, cytokinesignalisatie en celadhesie, wat het mechanisme van de ontstekingsreactie bij RA verder ondersteunt. Deze bevindingen dragen bij aan het inzicht in de moleculaire processen die bijdragen aan de progressie van RA en kunnen potentieel leiden tot nieuwe biomarkers voor vroege diagnose of doelgerichte therapieën.
+de verrijkingsanalyse via GO en KEGG benadrukte het belang van immuunactivatie, cytokinesignalering en celadhesie in RA-pathologie. deze inzichten dragen bij aan een beter begrip van de mechanismen achter RA en kunnen richting geven aan de ontwikkeling van biomarkers en gerichte therapieën. 
 
-Voor toekomstig onderzoek wordt aanbevolen om deze genen en pathways verder te valideren met experimentele technieken en om grotere patiëntengroepen te analyseren om de klinische relevantie te bevestigen
-
+voor toekomstig onderzoek wordt aanbevolen om deze resultaten te valideren in grotere hoeveelheden met aanvullende experimenten, om de klinische relevantie verder te onderbouwen.
 
 
 
