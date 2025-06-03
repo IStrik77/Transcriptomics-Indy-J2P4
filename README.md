@@ -31,19 +31,21 @@ De gebruikte brondata en artikelen zijn te vinden in de folder [bronnen](Bronnen
 
 Voor deze studie is RNA-sequencing data geanalyseerd van synoviumbiopten van gezonde controles en patiënten met reumatoïde artritis (RA).
 
-Figuur 1: flowschema van dataverwerking in R. nog maken
+*Figuur 1: flowschema van dataverwerking in R. nog maken*
 
-Verkregen data
+
+#### Verkregen data
+
 De RNA-sequencing data zijn verkregen uit synoviumbiopten van 4 patiënten met RA en 4 gezonde controles. Bij de RA-patiënten is de diagnose bevestigd door de aanwezigheid van anti-CCP autoantistoffen. Een overzicht van de data is te vinden in  ruwe data link(data link ruwe data).
 
-Mappen van data en countmatrix 
+#### Mappen van data en countmatrix 
 De ruwe sequencingbestanden (FASTQ-formaat) zijn opgeslagen in de map Ruwe Data/. Voor de uitlijning is het humane referentiegenoom GRCh38 (GCF_000001405.40, versie GRCh38.p14) van NCBI gebruikt. Vanwege de grootte van het genoom is het FASTA-bestand niet opgenomen in de repository, maar kan via NCBI worden gedownload via accessionnummer GCF_000001405.40.
 
 De referentie-index is opgebouwd met het R-pakket Rsubread (versie 2.20.0) met voldoende geheugen (4 GB) om de indexbestanden te splitsen. De sequencing reads zijn uitgelijnd met de functie align(), waarna de resulterende BAM-bestanden gesorteerd en geïndexeerd zijn met Rsamtools. De genexpressie is geteld met featureCounts(), waarbij gebruik is gemaakt van de GTF-annotatie Homo_sapiens.GRCh38.114.chr.gtf.gz van ENSEMBL.
 
 Differentiële expressieanalyse is uitgevoerd met DESeq2, waarbij het model ~ treatment (controle vs. RA) is toegepast. Resultaten zijn gevisualiseerd met EnhancedVolcano en geanalyseerd met goseq en pathview om biologische functies en pathways te identificeren.
 
-Statistische analyse
+#### Statistische analyse
 De gegenereerde countmatrix (data/count_matrix.txt) en een behandel-tabel met controle- en RA-status zijn ingeladen in DESeq2 (versie 1.46.0) om differentiële genexpressie te berekenen. Hierbij zijn log₂ fold changes, p-waarden en meervoudige testcorrecties (Benjamini-Hochberg) bepaald. Resultaten zijn gevisualiseerd in een volcano plot (log₂ fold change vs. significatie). Daarnaast is functionele verrijkingsanalyse uitgevoerd met goseq voor Gene Ontology en met pathview voor KEGG pathway-analyse.
 
 ## Resultaten
