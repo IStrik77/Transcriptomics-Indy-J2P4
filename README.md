@@ -27,7 +27,7 @@ Reumatoïde artritis (RA) is een chronische, systematische auto-immuunziekte waa
 
 In dit project wordt RNA-sequencing data geanalyseerd van synoviumbiopten van zowel gezonde personen als patiënten met RA (gevestigde diagnose, > 12 maanden). De analyse is uitgevoerd in R, met als doel: inzicht krijgen in genexpressieverschillen tussen de groepen en achterhalen welke biologische processen betrokken zijn bij RA, via Gene Ontology (GO-analyse) 
 
-De gebruikte brondata en artikelen zijn te vinden in deze folder [docs/bronnen](./docs/bronnen/).
+De gebruikte brondata en artikelen zijn te vinden in de folder [bronnen](bronnen). 
 
 
 
