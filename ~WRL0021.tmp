@@ -2,14 +2,17 @@
 
 ## Inhoud/structuur
 
-- `Bam bestanden/` - reads dat gemapt zijn tegen referentiegenoom  
-- `bronnen/` - gebruikte bronnen -> note: toevoegen NCBI in wordt document
-- `RScripts/` – Rscript waar alle data wordt verwerkt 
-- `resultaten/` - grafieken en tabellen
 - `Ruwe Data/` – Hierin zit de data van de Patiënten met en zonder Reumatoïde Atritis (RA).
-- `assets/` - overige documenten voor de opmaak van deze pagina
+- `RScripts/` – Rscript waar alle data wordt verwerkt 
 - `README.md` - Is het document waar het verslag (de tekst) in wordt gemaakt. 
+- `GTF humaan/` - In deze map zit het referentie genoom.
 
+Bestand te groot, dus eruit gehaald. Nummer referentiegen en de gebruikte index code + package versie nummer duidelijk erin zetten zodat het nagedaan kan worden in een word documentje. 
+- `Bam bestanden/` - reads dat gemapt zijn tegen referentiegenoom  
+- `data/processed` - verwerkte datasets gegenereerd met scripts 
+- `resultaten/` - grafieken en tabellen
+- `bronnen/` - gebruikte bronnen -> note: toevoegen NCBI in wordt document
+- `assets/` - overige documenten voor de opmaak van deze pagina
 
 
 
@@ -18,6 +21,7 @@
 ---
 
 ## Inleiding
+inleiding: +- 200 woorden met aanleiding, achtergrondinformatie en doelstelling. Bronnen (PDF) kunnen in een aparte folder met verwijzing.
 
 Reumatoïde artritis (RA) is een chronische, systematische auto-immuunziekte waarbij het immuunsysteem het eigen lichaam aanvalt. De exacte oorzaak is nog onbekend, maar vermoedelijk speelt een combinatie van genetische aanleg, omgevingsfactoren en een ontspoord immuunsysteem een rol [Gabriel, 2001](https://doi.org/10.1016/S0889-857X(05)70201-5). Een belangrijk kenmerk van RA is synovitis: een ontsteking van het gewrichtsslijmvlies, wat leidt tot pijn, zwelling en uiteindelijk gewrichtsschade [Radu & Bungau, 2021](https://doi.org/10.3390/cells10112857). Vroege opsporing en behandeling kunnen schade beperken, maar genezing is (nog) niet mogelijk.
 
@@ -28,9 +32,11 @@ De gebruikte brondata en artikelen zijn te vinden in de folder [bronnen](Bronnen
 
 
 ## Methoden
+Methode: +- 200 woorden met methode, flowschema. Zie leerdoelen voor mi-
+nimale inhoud. Scripts, data etc. kunnen in een aparte folder met verwijzing.
+Welke referentiegen gebruikt via NCBI en welk nummertje 
 
 Voor deze studie is RNA-sequencing data geanalyseerd van synoviumbiopten van gezonde controles en patiënten met reumatoïde artritis (RA).
-
 Figuur 1: flowschema van dataverwerking in R. nog maken
 
 Verkregen data
@@ -55,7 +61,7 @@ Voorbeeld:
 De analyse van de RNA-seq data toonde duidelijke verschillen in genexpressie tussen reumatoïde artritis (RA)-patiënten en gezonde controles. In totaal werden 102 genen met verhoogde expressie (log₂FC > 1, padj < 0.05) en 88 genen met verlaagde expressie (log₂FC < -1, padj < 0.05) geïdentificeerd. De volledige lijst van significante genen is beschikbaar in het resultatenbestand (welke okalweer) 
 
 
-De [volcano](Resultaten/Plots/VolcanoplotRA.png) plot toont een duidelijke scheiding tussen genen met verhoogde en verlaagde expressie in RA-patiënten. Genen met de meest significante expressieveranderingen (padj < 0.05) vallen op door hun sterke betrokkenheid bij ontstekingsgerelateerde processen.
+De volcano (linkje volkanoplot) plot toont een duidelijke scheiding tussen genen met verhoogde en verlaagde expressie in RA-patiënten. Genen met de meest significante expressieveranderingen (padj < 0.05) vallen op door hun sterke betrokkenheid bij ontstekingsgerelateerde processen.
 
 Vervolgonderzoek met GO-enrichmentanalyse toonde een significante oververtegenwoordiging van biologische processen die samenhangen met het immuunsysteem, waaronder ‘T cel activatie’ en ‘cytokine-mediated signaling’ (go resultaten LINKJE). KEGG-pathwayanalyse(linkje) suggereerde dat vooral routes zoals ‘T cell receptor signaling’ en ‘cytokine-cytokine receptor interaction’ betrokken zijn bij RA.
 Alle benodigde data, R-scripts en visualisaties zijn georganiseerd en terug te vinden in de betreffende mappen van de GitHub-repository 
