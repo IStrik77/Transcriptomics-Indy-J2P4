@@ -19,7 +19,7 @@
 
 ## Inleiding
 
-Reumatoïde artritis (RA) is een chronische, systematische auto-immuunziekte waarbij het immuunsysteem het eigen lichaam aanvalt. De exacte oorzaak is nog onbekend, maar vermoedelijk speelt een combinatie van genetische aanleg, omgevingsfactoren en een ontspoord immuunsysteem een rol [Gabriel, 2001](https://doi.org/10.1016/S0889-857X(05)70201-5). Een belangrijk kenmerk van RA is synovitis: een ontsteking van het gewrichtsslijmvlies, wat leidt tot pijn, zwelling en uiteindelijk gewrichtsschade [Radu & Bungau, 2021](https://doi.org/10.3390/cells10112857). Vroege opsporing en behandeling kunnen schade beperken, maar genezing is (nog) niet mogelijk.
+Reumatoïde artritis (RA) is een chronische, systematische auto-immuunziekte waarbij het immuunsysteem het eigen lichaam aanvalt. De exacte oorzaak is nog onbekend, maar vermoedelijk speelt een combinatie van genetische aanleg, omgevingsfactoren en een ontspoord immuunsysteem een rol [Gabriel, 2001](Bronnen/gabriel2001.pdf). Een belangrijk kenmerk van RA is synovitis: een ontsteking van het gewrichtsslijmvlies, wat leidt tot pijn, zwelling en uiteindelijk gewrichtsschade [Radu & Bangua, 2021](Bronnen/cells-10-02857-v2.pdf). Vroege opsporing en behandeling kunnen schade beperken, maar genezing is (nog) niet mogelijk.
 
 In dit project wordt RNA-sequencing data geanalyseerd van synoviumbiopten van zowel gezonde personen als patiënten met RA (gevestigde diagnose, > 12 maanden). De analyse is uitgevoerd in R, met als doel: inzicht krijgen in genexpressieverschillen tussen de groepen en achterhalen welke biologische processen betrokken zijn bij RA, via Gene Ontology (GO-analyse) 
 
