@@ -1,6 +1,7 @@
 <p align="center">
   <img src="assets/0419_RA-Symptoms.jpg" alt="Reuma Symptomen" width="600"/>
 </p>
+
 ## Inhoud/structuur
 
 - `Bam bestanden/` - reads dat gemapt zijn tegen referentiegenoom  
