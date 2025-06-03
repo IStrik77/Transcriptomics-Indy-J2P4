@@ -49,10 +49,6 @@ Differentiële expressieanalyse is uitgevoerd met DESeq2, waarbij het model ~ tr
 De gegenereerde countmatrix (data/count_matrix.txt) en een behandel-tabel met controle- en RA-status zijn ingeladen in DESeq2 (versie 1.46.0) om differentiële genexpressie te berekenen. Hierbij zijn log₂ fold changes, p-waarden en meervoudige testcorrecties (Benjamini-Hochberg) bepaald. Resultaten zijn gevisualiseerd in een volcano plot (log₂ fold change vs. significatie). Daarnaast is functionele verrijkingsanalyse uitgevoerd met goseq voor Gene Ontology en met pathview voor KEGG pathway-analyse.
 
 ## Resultaten
-Resultaten: +- 200 woorden, inclusief correcte verwijzingen.
-Resultaten die verkregen zijn uit R
-
-Voorbeeld:
 
 De analyse van de RNA-seq data toonde duidelijke verschillen in genexpressie tussen reumatoïde artritis (RA)-patiënten en gezonde controles. In totaal werden 102 genen met verhoogde expressie (log₂FC > 1, padj < 0.05) en 88 genen met verlaagde expressie (log₂FC < -1, padj < 0.05) geïdentificeerd. De volledige lijst van significante genen is beschikbaar in het resultatenbestand (welke okalweer) 
 
@@ -64,8 +60,6 @@ Alle benodigde data, R-scripts en visualisaties zijn georganiseerd en terug te v
 
 
 ## Conclusie
-Conclusie: +- 200 woorden, inclusief aanbevelingen en onderzoek in context
-plaatsen.
 
 In dit onderzoek is RNA-sequencing gebruikt om genexpressieverschillen te analyseren tussen synoviumbiopten van gezonde controles en patiënten met reumatoïde artritis (RA). De differentiële expressieanalyse toonde aan dat een aanzienlijk aantal genen significant anders tot expressie komt in RA, waarbij met name genen betrokken bij immuunrespons en ontstekingsprocessen zijn op- of afgeschaald. Dit bevestigt het ontstekingskarakter van RA zoals beschreven in de literatuur en sluit aan bij het klinische beeld van synovitis, waarbij het gewrichtsslijmvlies ontstoken raakt en beschadigd wordt.
 
