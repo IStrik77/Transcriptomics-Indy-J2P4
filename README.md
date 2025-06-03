@@ -59,7 +59,7 @@ De analyse van de RNA-seq data toonde duidelijke verschillen in genexpressie tus
 
 De [volcano](Resultaten/Plots/VolcanoplotRA.png) plot toont een duidelijke scheiding tussen genen met verhoogde en verlaagde expressie in RA-patiënten. Genen met de meest significante expressieveranderingen (padj < 0.05) vallen op door hun sterke betrokkenheid bij ontstekingsgerelateerde processen.
 
-Vervolgonderzoek met GO-enrichmentanalyse toonde een significante oververtegenwoordiging van biologische processen die samenhangen met het immuunsysteem, waaronder ‘T cel activatie’ en ‘cytokine-mediated signaling’ (go resultaten LINKJE). KEGG-pathwayanalyse(linkje) suggereerde dat vooral routes zoals ‘T cell receptor signaling’ en ‘cytokine-cytokine receptor interaction’ betrokken zijn bij RA.
+Vervolgonderzoek met [GO-enrichmentanalyse]( toonde een significante oververtegenwoordiging van biologische processen die samenhangen met het immuunsysteem, waaronder ‘T cel activatie’ en ‘cytokine-mediated signaling’ (go resultaten LINKJE). KEGG-pathwayanalyse(linkje) suggereerde dat vooral routes zoals ‘T cell receptor signaling’ en ‘cytokine-cytokine receptor interaction’ betrokken zijn bij RA.
 Alle benodigde data, R-scripts en visualisaties zijn georganiseerd en terug te vinden in de betreffende mappen van de GitHub-repository 
 
 
