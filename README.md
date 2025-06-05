@@ -35,6 +35,9 @@ De gebruikte brondata en artikelen zijn te vinden in de folder [bronnen](Bronnen
 
 Voor deze studie is RNA-sequencing data geanalyseerd van synoviumbiopten van gezonde controles en patiënten met reumatoïde artritis (RA).
 
+<p align="center">
+  <img src="assets/Biorender%Flowchart.png" alt="flowchart" width="600"/>
+</p>
 *Figuur 1: flowschema van dataverwerking in R. nog maken*
 
 
