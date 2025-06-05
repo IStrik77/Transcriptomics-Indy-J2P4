@@ -38,7 +38,8 @@ Voor deze studie is RNA-sequencing data geanalyseerd van synoviumbiopten van gez
 <p align="center">
   <img src="assets/BiorenderFlowchart2.png" alt="flowchart" width="600"/>
 </p>
-*Figuur 1: flowschema van dataverwerking in R. nog maken*
+
+_Figuur 1: flowschema van dataverwerking in R._
 
 
 #### Verkregen data
