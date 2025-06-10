@@ -7,7 +7,7 @@
 ## Inhoud/structuur
 
 - `Bam bestanden/` - reads dat gemapt zijn tegen referentiegenoom  
-- `bronnen/` - gebruikte bronnen -> note: toevoegen NCBI in wordt document
+- `bronnen/` - gebruikte bronnen 
 - `RScripts/` – Rscript waar alle data wordt verwerkt 
 - `resultaten/` - grafieken en tabellen
 - `Ruwe Data/` – Hierin zit de data van de Patiënten met en zonder Reumatoïde Atritis (RA).
