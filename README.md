@@ -1,4 +1,4 @@
-# Transcriptomics Casus
+# Transcriptomics Casus: Genexpressieanalyse bij Reumatoïde Artritis
 
 <p align="center">
   <img src="assets/0419_RA-Symptoms.jpg" alt="Reuma Symptomen" width="600"/>
