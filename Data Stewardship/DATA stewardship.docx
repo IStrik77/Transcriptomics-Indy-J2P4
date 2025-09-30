@@ -1,0 +1,39 @@
+competentie beheren (niveau 1) 
+- de student handelt binnen de gegeven kaders en procedures beschreven in relevante beheersystemen.
+de student laat dat zien door: 
+1| context:
+- blijk geven van globale kennis over de context waarin relevante beheersystemen zijn ingericht
+
+Tijdens mijn onderzoek naar reumatoïde artiritis heb ik gebruikgemaakt van R voor de analyse van RNA-sequencing data van zowel gezonde als zieke patiënten. 
+R biedt krachtige tools om data te controleren op betrouwbaarheid en om relevante patronen te identificeren die bijdragen aan het beantwoorden van de onderzoeksvraag.
+door gebruik te maken van gespecialiseerde packages in R kan data efficiënt en reproduceerdbaar worden geanalyseerd.
+
+daarnaasr speelt GitHub een belangrijke rol in het beheren van scripts en data. door mijn code en resultaten op Github
+te documenteren, wordt het onderzoek herhaalbaar. dit draagt bij aan de betrouwbaarheid van het onderzoek. 
+Ik heb globale kennis opgedaan van de context waarin deze beheersystemen (R en GitHub) zijn ingericht en begrijp het belang van gestructeerd en reproduceerbaar
+werken binnen bioinformatica-onderzoek. 
+
+2| Inrichting en inhoud van het systeem
+- De richtlijnen van relevante beheersystemen naleven door passend te handelen bij de uitvoering van eigen werkzaamheden
+
+Bij het verwerken van mijn data in R heb ik gewerkt volgend bestaande richtlijnen en protocollen, wat heeft geleid tot betrouwbare en reproduceerbare resultaten.
+GitHub fungeerde als platform voor versiebeheer: elke wijziging in scripts en data wordt (automatisch) vastgelegd, waardoor
+fouten kunnen worden opgespoord en eerdere versies kunnen worden hersteld.
+
+een duidelijke mappenstructuur en consitente bestandnamen zijn essentieel voor het overzichtelijk opslaan van data.
+dit vergemakkelijkt het terugvinden van informatie en ondersteunt de reproduceerbaarheid van het onderzoek. Door deze systemen
+correct in te richting en te gebruiken, heb ik inzicht gekregen in het belang van gestructureerd werken en het naleven van richtlijnen binnen data-analyse.
+
+3| Communicatie en rapportage
+- Communiceren over de richtlijnen van relevante beheersystemen bij uitvoering en werkzaamheden
+
+Heldere communicatie over het gebruik van R en Github is belangrijk voor het verkrijgen van betrouwbare onderzoeksresultaten.
+In R heb ik gewerkt met duidelijke annotaties en bijschriften, zodat elke stap in het proces traceerbaar is. 
+Dit maakt het ook mogelijk om resultaten effectief te delen met anderen.
+
+via GitHub kunnen scripts en resultaten eenvoudig worden gepubliceerd. het gebruik van versiebeheer zorgt ervoor dat wijzigingen worden
+bijgehouden en fouten snel kunnen worden gecorrigeerd. Daarnaast is het belangrijk om gevoelige patiëntdata zorgvuldig te anonimiseren en veilig
+op te slaan.
+
+Door mijn data en scripts op een gestructureerde manier te rapporteren, heb ik geleerd hoe belangrijk het is om betrouwbare en herhaalbaar
+onderzoek te doen. dit draagt bij aan vervolgonderzoek en aan het uitbreiden van de wetenschappelijke kennis. 
