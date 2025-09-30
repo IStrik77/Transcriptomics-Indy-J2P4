@@ -74,22 +74,27 @@ De gegenereerde countmatrix (data/count_matrix.txt) en een behandel-tabel met co
 
 ## Resultaten
 
-De analyse van de RNA-seq data toonde duidelijke verschillen in genexpressie tussen reumatoïde artritis (RA)-patiënten en gezonde controles. In totaal werden 102 genen met verhoogde expressie (log₂FC > 1, padj < 0.05) en 88 genen met verlaagde expressie (log₂FC < -1, padj < 0.05) geïdentificeerd. De volledige lijst van significante genen is beschikbaar in [ResultatenRA](Resultaten/ResultatenRA.csv)
+### Differentiële genexpressieanalyse 
+om genen te identificeren die verschillend tot expressie komen tussen RA-patiënten en gezonde controles, is een RNA-seq analyse uitgevoerd met DESeq2. In totaal werden 102 genen met verhoogde expressie (log₂FC > 1, padj < 0.05) en 88 genen met verlaagde expressie (log₂FC < -1, padj < 0.05) geïdentificeerd. de resultaten zijn weergegeven in een [volcano](Resultaten/Plots/VolcanoplotRA.png) , waarin de log2 fold change tegenover de -log1- p-waarde van elk gen staat. De volledige lijst van significante genen is beschikbaar in [ResultatenRA](Resultaten/ResultatenRA.csv).
 
+De plot laat zien dat er meerdere genen significant op- of neerwaarts gereguleerd zijn. echter ontbreken labels voor de belangrijkste genen, waardoor het lastig is om direct te zien welke genen betrokken zijn bij RA. voor toekomstige analyse zou het toevoegen van genlabels helpen om de interpretatie te verbeteren. 
+Door technische problemen in R kon dit nu niet worden gerealiseerd. 
+ 
+### GO-enrichmentanalyse
+Om de biologische betekenis van de differentieel tot expressie gebrachte genen te achterhalen, is een [GO-enrichmentanalyse](Resultaten/Plots/Rplot03.png) uitgevoerd. De resultaten zijn weergegeven in een barplot waarin termen zoals: _Immune system process, Immune respons, Protein binding, Intracellular orgaanelle lumen_ 
+Duidelijk naar voren komen. deze termen zijn statistisch verrijkt en wijzen op verstoring van immuunprocessen, wat goed past bij het ziektebeeld van RA. 
+De visualisatie toont zowel het aantal betrokken genen als p-waarden, en geeft een helder overzicht van de belangrijkste biologische processen.
 
-De [volcano](Resultaten/Plots/VolcanoplotRA.png) plot toont een duidelijke scheiding tussen genen met verhoogde en verlaagde expressie in RA-patiënten. Genen met de meest significante expressieveranderingen (padj < 0.05) vallen op door hun sterke betrokkenheid bij ontstekingsgerelateerde processen.
+### KEGG-pathwayanalyse
+voor verdere interpretatie is een [KEGG-pathwayanalyse](Resultaten/hsa03260.png) uitgevoerd. het bijgevoegde figuur toont een HIV-gerelateerde pathway, wat niet direct relevant lijkt voor RA. Toch bevat deze pathwat immuunreceptoren zoals _CD4_, die ook een rol spelen in auto-immuunziekten zoals RA. 
 
-Vervolgonderzoek met [GO-enrichmentanalyse](Resultaten/Plots/Rplot02.png) toonde een significante oververtegenwoordiging van biologische processen die samenhangen met het immuunsysteem, waaronder ‘T cel activatie’ en ‘cytokine-mediated signaling’ . [KEGG-pathwayanalyse](Resultaten/hsa03260.png) suggereerde dat vooral routes zoals ‘T cell receptor signaling’ en ‘cytokine-cytokine receptor interaction’ betrokken zijn bij RA.
-
+Hoewel deze pathway enkele relevante elementen bevat, zou het beter zijn om pathways te tonen die direct met RA te maken hebben, zoals: 
+_Cytokine-cytokine receptor interaction, Toll-like receptor signaling pathway_ , deze zijn nauw betrokken bij ontstekingsreacties en geven een duidelijker beeld van de moleculaire processen in RA.
 
 
 ## Conclusie
 
-Deze studie toont aan dat RNA-sequencing van synoviumbiopten verschil in genexpressie kan onthullen tussen RA-patiënten en gezonde controles. vooral genen betrokken bij immuunrespons en ontsteking vertoonden sginificante regulatie, wat het ontstekingskarakter van RA onderstreept en aansluit bij de klinische kenmerken van synovitis.
 
-de verrijkingsanalyse via GO en KEGG benadrukte het belang van immuunactivatie, cytokinesignalering en celadhesie in RA-pathologie. deze inzichten dragen bij aan een beter begrip van de mechanismen achter RA en kunnen richting geven aan de ontwikkeling van biomarkers en gerichte therapieën. 
-
-voor toekomstig onderzoek wordt aanbevolen om deze resultaten te valideren in grotere hoeveelheden met aanvullende experimenten, om de klinische relevantie verder te onderbouwen.
 
 
 
