@@ -75,25 +75,31 @@ De gegenereerde countmatrix (data/count_matrix.txt) en een behandel-tabel met co
 ## Resultaten
 
 ### Differentiële genexpressieanalyse 
-om genen te identificeren die verschillend tot expressie komen tussen RA-patiënten en gezonde controles, is een RNA-seq analyse uitgevoerd met DESeq2. In totaal werden 102 genen met verhoogde expressie (log₂FC > 1, padj < 0.05) en 88 genen met verlaagde expressie (log₂FC < -1, padj < 0.05) geïdentificeerd. de resultaten zijn weergegeven in een [volcano](Resultaten/Plots/VolcanoplotRA.png) , waarin de log2 fold change tegenover de -log1- p-waarde van elk gen staat. De volledige lijst van significante genen is beschikbaar in [ResultatenRA](Resultaten/ResultatenRA.csv).
+om genen te identificeren die verschillend tot expressie kwamen tussen RA-patiënten en gezonde controles, werd een RNA-seq analyse uitgevoerd met DESeq2. In totaal werden 102 genen met verhoogde expressie (log₂FC > 1, padj < 0.05) en 88 genen met verlaagde expressie (log₂FC < -1, padj < 0.05) geïdentificeerd. de resultaten worden weergegeven in een [volcano](Resultaten/Plots/VolcanoplotRA.png) , waarin de log2 fold change tegenover de -log1- p-waarde van elk gen staat. De volledige lijst van significante genen is beschikbaar in [ResultatenRA](Resultaten/ResultatenRA.csv).
 
-De plot laat zien dat er meerdere genen significant op- of neerwaarts gereguleerd zijn. echter ontbreken labels voor de belangrijkste genen, waardoor het lastig is om direct te zien welke genen betrokken zijn bij RA. voor toekomstige analyse zou het toevoegen van genlabels helpen om de interpretatie te verbeteren. 
-Door technische problemen in R kon dit nu niet worden gerealiseerd. 
+De plot toonde aan dat er meerdere genen significant op- of neerwaarts gereguleerd zijn. echter ontbraken labels voor de belangrijkste genen, waardoor het lastig was om direct te zien welke genen betrokken waren bij RA. voor toekomstige analyse zou het toevoegen van genlabels helpen om de interpretatie te verbeteren. 
+Door technische problemen in R kon dit op dit moment niet worden gerealiseerd. 
  
 ### GO-enrichmentanalyse
-Om de biologische betekenis van de differentieel tot expressie gebrachte genen te achterhalen, is een [GO-enrichmentanalyse](Resultaten/Plots/Rplot03.png) uitgevoerd. De resultaten zijn weergegeven in een barplot waarin termen zoals: _Immune system process, Immune respons, Protein binding, Intracellular orgaanelle lumen_ 
-Duidelijk naar voren komen. deze termen zijn statistisch verrijkt en wijzen op verstoring van immuunprocessen, wat goed past bij het ziektebeeld van RA. 
-De visualisatie toont zowel het aantal betrokken genen als p-waarden, en geeft een helder overzicht van de belangrijkste biologische processen.
+Om de biologische betekenis van de differentieel tot expressie gebrachte genen te achterhalen, werd een [GO-enrichmentanalyse](Resultaten/Plots/Rplot03.png) uitgevoerd. De resultaten werden weergegeven in een barplot waarin termen zoals: _Immune system process, Immune respons, Protein binding, Intracellular orgaanelle lumen_ 
+Duidelijk naar voren komen. deze termen waren statistisch verrijkt en wezen op verstoring van immuunprocessen, wat goed paste bij het ziektebeeld van RA. 
+De visualisatie toonde zowel het aantal betrokken genen als p-waarden, en gaf een helder overzicht van de belangrijkste biologische processen.
 
 ### KEGG-pathwayanalyse
-voor verdere interpretatie is een [KEGG-pathwayanalyse](Resultaten/hsa03260.png) uitgevoerd. het bijgevoegde figuur toont een HIV-gerelateerde pathway, wat niet direct relevant lijkt voor RA. Toch bevat deze pathwat immuunreceptoren zoals _CD4_, die ook een rol spelen in auto-immuunziekten zoals RA. 
+voor verdere interpretatie werd een [KEGG-pathwayanalyse](Resultaten/hsa03260.png) uitgevoerd. het bijgevoegde figuur toonde een HIV-gerelateerde pathway, wat niet direct relevant leek voor RA. Toch bevatte deze pathwat immuunreceptoren zoals _CD4_, die ook een rol spelen in auto-immuunziekten zoals RA. 
 
 Hoewel deze pathway enkele relevante elementen bevat, zou het beter zijn om pathways te tonen die direct met RA te maken hebben, zoals: 
 _Cytokine-cytokine receptor interaction, Toll-like receptor signaling pathway_ , deze zijn nauw betrokken bij ontstekingsreacties en geven een duidelijker beeld van de moleculaire processen in RA.
 
 
 ## Conclusie
+Deze RNA-sequencinganalyse van synoviumbiopten van RA-patiënten en gezonde controles laat zien dat er duidelijke verschillen zijn in genexpressie tussen beide groepen. De differentiële expressieanalyse identificeerde meerdere genen met significante op- of neerregulatie. hoewel verdere interpretatie beperkt werd door het ontbreken van genlabels in de visualisatie.
 
+De GO-enrichmentanalyse toonde een duidelijke verrijking van immuun-gerelateerde processen, zoals _immune respone_ en _Protein binding_, wat goed aansluit bij het ontstekingskarakter van RA. Dit bevestigd dat immuunactivatie een centrale rol speelt in pathogenese van de ziekte.
+
+Hoewel de KEGG-pathwayanalyse oorspronkelijk een HIV-gerelateerde pathway toonde, bevatte deze wel immuunreceptoren die ook relevant zijn voor RA. voor een meer directe interpretatie zouden RA-specifieke pathwats zoals _Cytokine-cytokine receptor interaction_ beter geschikt zijn. 
+
+Afsluitend bieden de resultaten waardevolle inzichten in de moleculaire processen die betrokken zijn bij RA, met name op het gebied van immuunregulatie. verdere verfijning van de visualisaties en pathwayselectie kan bijdragen aan een nog scherpere interpretatie en mogelijke aanknopingspunten voor therapie of diagnostiek.
 
 
 
