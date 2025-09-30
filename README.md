@@ -45,17 +45,10 @@ _Figuur 1: flowschema van dataverwerking in R._
 #### Verkregen data
 
 De RNA-sequencing data zijn verkregen uit synoviumbiopten van 4 patiënten met RA en 4 gezonde controles. Bij de RA-patiënten is de diagnose bevestigd door de aanwezigheid van anti-CCP autoantistoffen. Een overzicht van de data is te vinden in  ruwe data link(data link ruwe data).
-Sample ID	Age	Sex	Condition
-SRR4785819	31	Female	Normal
-SRR4785820	15	Female	Normal
-SRR4785828	31	Female	Normal
-SRR4785831	42	Female	Normal
-Average Age	29.8	–	Normal
-SRR4785979	54	Female	Rheumatoid arthritis (established)
-SRR4785980	66	Female	Rheumatoid arthritis (established)
-SRR4785986	60	Female	Rheumatoid arthritis (established)
-SRR4785988	59	Female	Rheumatoid arthritis (established)
-Average Age	59.8	–	Rheumatoid arthritis (established)
+
+_Tabel 1. overzicht van de gebruikte samplemetadate in deze studie._
+
+
 
 #### Mappen van data en countmatrix 
 De ruwe sequencingbestanden (FASTQ-formaat) zijn opgeslagen in de map [Ruwe Data](Ruwe%20Data). Voor de uitlijning is het humane referentiegenoom GRCh38 (GCF_000001405.40, versie GRCh38.p14) van NCBI gebruikt. Vanwege de grootte van het genoom is het FASTA-bestand niet opgenomen in de repository, maar kan via NCBI worden gedownload via accessionnummer [GCF_000001405.40](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/).
