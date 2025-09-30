@@ -48,6 +48,18 @@ De RNA-sequencing data zijn verkregen uit synoviumbiopten van 4 patiënten met R
 
 _Tabel 1. overzicht van de gebruikte samplemetadate in deze studie._
 
+| Sample ID     | Age | Sex    | Condition                          |
+|---------------|-----|--------|------------------------------------|
+| SRR4785819    | 31  | Female | Normal                             |
+| SRR4785820    | 15  | Female | Normal                             |
+| SRR4785828    | 31  | Female | Normal                             |
+| SRR4785831    | 42  | Female | Normal                             |
+| *Average Age* | *29.8* | – | *Normal*                       |
+| SRR4785979    | 54  | Female | Rheumatoid arthritis (established) |
+| SRR4785980    | 66  | Female | Rheumatoid arthritis (established) |
+| SRR4785986    | 60  | Female | Rheumatoid arthritis (established) |
+| SRR4785988    | 59  | Female | Rheumatoid arthritis (established) |
+| *Average Age* | *59.8* | – | *Rheumatoid arthritis (established)* |
 
 
 #### Mappen van data en countmatrix 
