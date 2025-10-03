@@ -48,26 +48,26 @@ De RNA-sequencing data zijn verkregen uit synoviumbiopten van 4 patiënten met R
 
 _Tabel 1. overzicht van de gebruikte samplemetadate in deze studie._
 
-| Sample ID     | Age | Sex    | Condition                          |
-|---------------|-----|--------|------------------------------------|
-| SRR4785819    | 31  | Female | Normal                             |
-| SRR4785820    | 15  | Female | Normal                             |
-| SRR4785828    | 31  | Female | Normal                             |
-| SRR4785831    | 42  | Female | Normal                             |
-| *Average Age* | *29.8* | – | *Normal*                       |
-| SRR4785979    | 54  | Female | Rheumatoid arthritis (established) |
-| SRR4785980    | 66  | Female | Rheumatoid arthritis (established) |
-| SRR4785986    | 60  | Female | Rheumatoid arthritis (established) |
-| SRR4785988    | 59  | Female | Rheumatoid arthritis (established) |
-| *Average Age* | *59.8* | – | *Rheumatoid arthritis (established)* |
+| Monster ID            | Leeftijd | Geslacht    | Conditie                             |
+|-----------------------|----------|-------------|--------------------------------------|
+| SRR4785819            | 31       | Vrouw       | Normaal                              |
+| SRR4785820            | 15       | Vrouw       | Normaal                              |
+| SRR4785828            | 31       | Vrouw       | Normaal                              |
+| SRR4785831            | 42       | Vrouw       | Normaal                              |
+| *Gemiddelde leeftijd* | *29.8*   | –           | *Normaal*                            |
+| SRR4785979            | 54       | Vrouw       | Rheumatoid arthritis (Vastgesteld)   |
+| SRR4785980            | 66       | Vrouw       | Rheumatoid arthritis (Vastgesteld)   |
+| SRR4785986            | 60       | Vrouw       | Rheumatoid arthritis (Vastgesteld)   |
+| SRR4785988            | 59       | Vrouw       | Rheumatoid arthritis (Vastgesteld)   |
+| *Gemiddelde Leeftijd* | *59.8*   | –           | *Rheumatoid arthritis (Vastgesteld)* |
 
 
 #### Mappen van data en countmatrix 
 De ruwe sequencingbestanden (FASTQ-formaat) zijn opgeslagen in de map [Ruwe Data](Ruwe%20Data). Voor de uitlijning is het humane referentiegenoom GRCh38 (GCF_000001405.40, versie GRCh38.p14) van NCBI gebruikt. Vanwege de grootte van het genoom is het FASTA-bestand niet opgenomen in de repository, maar kan via NCBI worden gedownload via accessionnummer [GCF_000001405.40](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/).
 
-De referentie-index is opgebouwd met het R-pakket Rsubread (versie 2.20.0) met voldoende geheugen (4 GB) om de indexbestanden te splitsen. De sequencing reads zijn uitgelijnd met de functie align(), waarna de resulterende BAM-bestanden gesorteerd en geïndexeerd zijn met Rsamtools. De genexpressie is geteld met featureCounts(), waarbij gebruik is gemaakt van de GTF-annotatie Homo_sapiens.GRCh38.114.chr.gtf.gz van ENSEMBL.
+De referentie-index is opgebouwd met het R-pakket Rsubread (versie 2.20.0) met voldoende geheugen (4 GB) om de indexbestanden te splitsen. De sequencing reads zijn uitgelijnd met de functie align(), waarna de resulterende BAM-bestanden gesorteerd en geïndexeerd zijn met Rsamtools (Versie 2.14.0). De genexpressie is geteld met featureCounts(), waarbij gebruik is gemaakt van de GTF-annotatie Homo_sapiens.GRCh38.114.chr.gtf.gz van ENSEMBL.
 
-Differentiële expressieanalyse is uitgevoerd met DESeq2, waarbij het model ~ treatment (controle vs. RA) is toegepast. Resultaten zijn gevisualiseerd met EnhancedVolcano en geanalyseerd met goseq en pathview om biologische functies en pathways te identificeren.
+Differentiële expressieanalyse is uitgevoerd met DESeq2 (Versie 1.46.0), waarbij het model ~ treatment (controle vs. RA) is toegepast. Resultaten zijn gevisualiseerd met EnhancedVolcano (Versie 1.18.0), en geanalyseerd met goseq (Versie 1.52.0) en pathview (Versie 1.38.0) om biologische functies en pathways te identificeren.
 
 #### Statistische analyse
 De gegenereerde countmatrix (data/count_matrix.txt) en een behandel-tabel met controle- en RA-status zijn ingeladen in DESeq2 (versie 1.46.0) om differentiële genexpressie te berekenen. Hierbij zijn log₂ fold changes, p-waarden en meervoudige testcorrecties (Benjamini-Hochberg) bepaald. Resultaten zijn gevisualiseerd in een volcano plot (log₂ fold change vs. significatie). Daarnaast is functionele verrijkingsanalyse uitgevoerd met goseq voor Gene Ontology en met pathview voor KEGG pathway-analyse.
@@ -75,18 +75,18 @@ De gegenereerde countmatrix (data/count_matrix.txt) en een behandel-tabel met co
 ## Resultaten
 
 ### Differentiële genexpressieanalyse 
-om genen te identificeren die verschillend tot expressie kwamen tussen RA-patiënten en gezonde controles, werd een RNA-seq analyse uitgevoerd met DESeq2. In totaal werden 102 genen met verhoogde expressie (log₂FC > 1, padj < 0.05) en 88 genen met verlaagde expressie (log₂FC < -1, padj < 0.05) geïdentificeerd. de resultaten worden weergegeven in een [volcano](Resultaten/Plots/VolcanoplotRA.png) , waarin de log2 fold change tegenover de -log1- p-waarde van elk gen staat. De volledige lijst van significante genen is beschikbaar in [ResultatenRA](Resultaten/ResultatenRA.csv).
+Om genen te identificeren die verschillend tot expressie kwamen tussen RA-patiënten en gezonde controles, werd een RNA-seq analyse uitgevoerd met DESeq2. In totaal werden 102 genen met verhoogde expressie (log₂FC > 1, padj < 0.05) en 88 genen met verlaagde expressie (log₂FC < -1, padj < 0.05) geïdentificeerd. De resultaten worden weergegeven in een [volcano](Resultaten/Plots/VolcanoplotRA.png) , waarin de log2 fold change tegenover de -log1- p-waarde van elk gen staat. De volledige lijst van significante genen is beschikbaar in [ResultatenRA](Resultaten/ResultatenRA.csv).
 
-De plot toonde aan dat er meerdere genen significant op- of neerwaarts gereguleerd zijn. echter ontbraken labels voor de belangrijkste genen, waardoor het lastig was om direct te zien welke genen betrokken waren bij RA. voor toekomstige analyse zou het toevoegen van genlabels helpen om de interpretatie te verbeteren. 
+De plot toonde aan dat er meerdere genen significant op- of neerwaarts gereguleerd zijn. Echter ontbraken labels voor de belangrijkste genen, waardoor het lastig was om direct te zien welke genen betrokken waren bij RA. Voor toekomstige analyse zou het toevoegen van genlabels helpen om de interpretatie te verbeteren. 
 Door technische problemen in R kon dit op dit moment niet worden gerealiseerd. 
  
 ### GO-enrichmentanalyse
 Om de biologische betekenis van de differentieel tot expressie gebrachte genen te achterhalen, werd een [GO-enrichmentanalyse](Resultaten/Plots/Rplot03.png) uitgevoerd. De resultaten werden weergegeven in een barplot waarin termen zoals: _Immune system process, Immune respons, Protein binding, Intracellular orgaanelle lumen_ 
-Duidelijk naar voren komen. deze termen waren statistisch verrijkt en wezen op verstoring van immuunprocessen, wat goed paste bij het ziektebeeld van RA. 
+Duidelijk naar voren komen. Deze termen waren statistisch verrijkt en wezen op verstoring van immuunprocessen, wat goed paste bij het ziektebeeld van RA. 
 De visualisatie toonde zowel het aantal betrokken genen als p-waarden, en gaf een helder overzicht van de belangrijkste biologische processen.
 
 ### KEGG-pathwayanalyse
-voor verdere interpretatie werd een [KEGG-pathwayanalyse](Resultaten/hsa03260.png) uitgevoerd. het bijgevoegde figuur toonde een HIV-gerelateerde pathway, wat niet direct relevant leek voor RA. Toch bevatte deze pathwat immuunreceptoren zoals _CD4_, die ook een rol spelen in auto-immuunziekten zoals RA. 
+Voor verdere interpretatie werd een [KEGG-pathwayanalyse](Resultaten/hsa03260.png) uitgevoerd. Het bijgevoegde figuur toonde een HIV-gerelateerde pathway, wat niet direct relevant leek voor RA. Toch bevatte deze pathwat immuunreceptoren zoals _CD4_, die ook een rol spelen in auto-immuunziekten zoals RA. 
 
 Hoewel deze pathway enkele relevante elementen bevat, zou het beter zijn om pathways te tonen die direct met RA te maken hebben, zoals: 
 _Cytokine-cytokine receptor interaction, Toll-like receptor signaling pathway_ , deze zijn nauw betrokken bij ontstekingsreacties en geven een duidelijker beeld van de moleculaire processen in RA.
