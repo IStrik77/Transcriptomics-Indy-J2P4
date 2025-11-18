@@ -75,30 +75,25 @@ De gegenereerde countmatrix (data/count_matrix.txt) en een behandel-tabel met co
 ## Resultaten
 
 ### Differentiële genexpressieanalyse 
-Om genen te identificeren die verschillend tot expressie kwamen tussen RA-patiënten en gezonde controles, werd een RNA-seq analyse uitgevoerd met DESeq2. In totaal werden 102 genen met verhoogde expressie (log₂FC > 1, padj < 0.05) en 88 genen met verlaagde expressie (log₂FC < -1, padj < 0.05) geïdentificeerd. De resultaten worden weergegeven in een [volcanoPlot](Resultaten/Plots/VolcanoplotRA.png) , waarin de log2 fold change tegenover de -log10 p-waarde van elk gen staat. De volledige lijst van significante genen is beschikbaar in [ResultatenRA](Resultaten/ResultatenRA.csv).
+Om genen te identificeren die verschillend tot expressie kwamen tussen RA-patiënten en gezonde controles, werd een RNA-seq analyse uitgevoerd met DESeq2. In totaal werden 102 genen met verhoogde expressie (log₂FC > 1, padj < 0.05) en 88 genen met verlaagde expressie (log₂FC < -1, padj < 0.05) geïdentificeerd. De volledige lijst van significante genen is beschikbaar in [ResultatenRA](Resultaten/ResultatenRA.csv).
 
-De plot toonde aan dat er meerdere genen significant op- of neerwaarts gereguleerd zijn. Echter, werd in de visualisatie de genen weergegeven als punten, maar zonder Labels (namen van de genen) erbij. Hierdoor was het lastig om direct af te lezen welke specifieke genen betrokken waren bij RA.Voor toekomstige analyse zou het toevoegen van genlabels helpen om de interpretatie te verbeteren. 
-Door technische problemen in R kon dit op dit moment niet worden gerealiseerd. 
- 
+De [Volcano Plot](Resultaten/Plots/Resultaten/Plots/VolcanoplotRA.png)  toont de verdeling van alle 29.407 onderzochte genen op basis van Log2 fold change en -log10 p-waarde. Meerdere genen zijn significant op- of neerwaarts gereguleerd. Opvallende genen zijn onder andere ANKRD30BL, MT-ND6, SLC9A3R2, en ZNF598, evenals immuungerelateerde genen zoals IGHV1-69, IGHV4-31, ADAMTS6, BCL2A1 en ZNF598. Deze genen spelen een rol in immuunactivatie en ontstekingsprocessen, wat kenmerkend is voor RA.
+
 ### GO-enrichmentanalyse
-Om de biologische betekenis van de differentieel tot expressie gebrachte genen te achterhalen, werd een [GO-enrichmentanalyse](Resultaten/Plots/Rplot03.png) uitgevoerd. De resultaten werden weergegeven in een barplot waarin termen zoals: _Immune system process_ (processen van het immuunsysteem)_, Immune response_ (reactie van het immuunsysteem op prikkels) _, Protein binding_ ( binding van eiwitten aan andere moleculen) _, Intracellular organelle lumen_ (de binnenruimte van celorganellen) duidelijk naar voren komen. Deze termen waren statistisch verrijkt en wezen op verstoring van immuunprocessen, wat goed paste bij het ziektebeeld van RA. 
-De visualisatie toonde zowel het aantal betrokken genen als p-waarden, en gaf een helder overzicht van de belangrijkste biologische processen.
+Om de biologische betekenis van de differentieel tot expressie gebrachte genen te achterhalen, werd een [GO-enrichmentanalyse](Resultaten/Plots/Resultaten/Plots/Rplot.png) uitgevoerd. De analyse laat zien dat dat genen die betrokken zijn bij intracellulaire structuren (zoals nucleoplasm en organelle lumen) en immuunprocessen sterk verrijkt zijn. Dit wijst erop dat RA gepaard gaat met veranderingen in nucleaire functies en een verhoogde immuunactiviteit, wat goed aansluit bij het ontstekingskarakter van de ziekte.
 
 ### KEGG-pathwayanalyse
-Voor verdere interpretatie werd een [KEGG-pathwayanalyse](Resultaten/hsa03260.png) uitgevoerd. Het bijgevoegde figuur toonde een HIV-gerelateerde pathway, wat niet direct relevant leek voor RA. Toch bevatte deze pathway immuunreceptoren zoals _CD4_, die ook een rol spelen in auto-immuunziekten zoals RA. 
-
-Hoewel deze pathway enkele relevante elementen bevat, zou het beter zijn om pathways te tonen die direct met RA te maken hebben, zoals: 
-_Cytokine-cytokine receptor interaction, Toll-like receptor signaling pathway_ , deze zijn nauw betrokken bij ontstekingsreacties en geven een duidelijker beeld van de moleculaire processen in RA.
+De [KEGG-pathwayanalyse](Resultaten/Plots/Resultaten/Plots/hsa05323.pathview.png) toont aan dat de reumatoïde pathway significant beïnvloed is. Belangrijke inflammatoire mediatoren zoals TNF,IL6 en apoptose-gerelateerde genen zoals BAX zijn upgeregulated (rood), terwijl enkele genen betrokken bij osteoclastdifferentiatie downregulated zijn (groen). Dit bevestigd dat RA gepaard gaat met verhoogde cytokineactiviteit en immuuncelstimulatie, wat leidt tot gewrichtsschade. 
 
 
 ## Conclusie
-Deze RNA-sequencinganalyse van synoviumbiopten van RA-patiënten en gezonde controles laat zien dat er duidelijke verschillen zijn in genexpressie tussen beide groepen. De differentiële expressieanalyse identificeerde meerdere genen met significante op- of neerregulatie, hoewel verdere interpretatie beperkt werd door het ontbreken van genlabels in de visualisatie.
+Deze RNA-sequencinganalyse van synoviumbiopten van RA-patiënten en gezonde controles bevestigd dat reumatoïde artritis gepaard gaat met duidelijke moleculaire veranderingen. De differentiële expressieanalyse identificeerde meerdere immuungerelateerde genen met significante op- en neerregulatie, wat wijst op een actieve ontstekingsrespons in het synovium.
 
-De GO-enrichmentanalyse toonde een duidelijke verrijking van immuun-gerelateerde processen, zoals _immune response_ en _Protein binding_, wat goed aansluit bij het ontstekingskarakter van RA. Dit bevestigt dat immuunactivatie een centrale rol speelt in de pathogenese van de ziekte.
+De Go-enrichmentanalyse benadrukt dat processen zoals Immune response en Protein binding sterk verrijkt zijn, naast termen die verband houden met nucleaire en organelle functies. Dit suggereert dat RA niet alleen een immuun-gemedieerde aandoening is, maar ook gepaard gaat met fundamentele veranderingen in intracellulaire regulatie. 
 
-Hoewel de KEGG-pathwayanalyse oorspronkelijk een HIV-gerelateerde pathway toonde, bevatte deze wel immuunreceptoren die ook relevant zijn voor RA. voor een meer directe interpretatie zouden RA-specifieke pathways zoals _Cytokine-cytokine receptor interaction_ beter geschikt zijn. 
+de KEGG-pathwayanalyse toont activatie van de RA-specifieke pathway, inclusief sleutelgenen zoals TNF en IL6, die centrale rollen spelen in cytokine-signaaltransductie en immuuncelstimulatie. Deze bevindingen onderstrepen het belang van therapieën die gericht zijn op cytokine-remming. 
 
-Afsluitend bieden de resultaten waardevolle inzichten in de moleculaire processen die betrokken zijn bij RA, met name op het gebied van immuunregulatie. Verdere verfijning van de visualisaties en pathwayselectie kan bijdragen aan een nog scherpere interpretatie en mogelijke aanknopingspunten voor therapie of diagnostiek.
+Afsluitend bieden deze resultaten waardevolle inzichten in de pathogenese van RA en vormen ze een basis voor verder onderzoek naar moleculaire targets die betrokken zijn bij immuunregulatie en intracellulaire processen. 
 
 
 
